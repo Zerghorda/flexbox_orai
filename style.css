@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+article,
+div {
+  border: 1px solid gray;
+  padding: 10px;
+}
+div {
+  background-color: antiquewhite;
+  flex: 0 0 calc(30% - 10px);
+}
+article {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+div:nth-child(2) {
+  order: -1;
+}
+div:nth-child(3) {
+  order: -1;
+}
+@media screen and (max-width: 500px) {
+  article {
+    flex-direction: column;
+  }
+  div {
+    flex: 0 0 100%;
+  }
+}
